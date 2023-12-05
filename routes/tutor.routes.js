@@ -12,6 +12,9 @@ tutorRouter.get("/update-ping",async(req,res)=>{
 
         const {user}=req.body;
 
+        // taking users._id as tutorId wich is present in jwt payload 
+        // i attached decoded payload data from jwt token with req.body in authentication middleware. 
+        
         let updatedData = await Avaiblity.findOneAndUpdate({tutorId:user._doc._id},{lastPingTime:new Date()},{new:true});
 
         res.status(200).send({

@@ -11,6 +11,8 @@ doughtRouter.get("/history", async(req,res)=>{
     try {
         const {user}=req.body;
 
+        // taking users._id as studentId wich is present in jwt payload 
+        // i attached decoded payload data from jwt token with req.body in authentication middleware. 
         let data= await Dought.find({studentId:user._doc._id}).sort({ createdAt: -1 });
 
         res.status(200).send({

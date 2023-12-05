@@ -13,6 +13,8 @@ const authentication= async (req,res,next)=>{
             let decode= jwt.verify(token,process.env.secret_token_key);
 
             if(decode){
+
+                // attaching decoded data from jwt token with req.body
                 req.body.user=decode;
                 next();
             }else{

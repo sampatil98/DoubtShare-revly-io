@@ -29,7 +29,8 @@ app.use("/dought",doughtRouter);
 
 
 
-// JOB wich count available tutors count every second
+// JOB wich count and console available tutors count every second
+
 async function countAvailableTutors() {
 
     const currentTime = new Date();
@@ -54,6 +55,7 @@ app.listen(process.env.port,async()=>{
         await connection;
         console.log("connectec to DB");
         console.log(`server is running on port ${process.env.port}`);
+        
         cron.schedule('* * * * * *', countAvailableTutors);
         
     } catch (error) {
