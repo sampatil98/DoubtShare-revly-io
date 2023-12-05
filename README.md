@@ -13,10 +13,6 @@
 - **Implementation**:
   - The cron job is initialized upon server startup using `cron.schedule('* * * * * *', countAvailableTutors)`.
   - `countAvailableTutors` function performs the database query and logging.
-- **Considerations**:
-  - **Performance**: Frequent database queries might impact performance; consider optimization if the collection grows significantly.
-  - **Frequency**: Running a cron job every second can be resource-intensive; adjust as per real-time needs.
-  - **Error Handling**: Basic error handling is implemented but further enhancements may be needed for production.
 
 
 ## User Routes
