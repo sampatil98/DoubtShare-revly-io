@@ -1,6 +1,6 @@
 # DoubtShare-revly-io Assignment
 
-##This document outlines the available routes, their functionalities, expected inputs, and responses for the application.
+## This document outlines the available routes, their functionalities, expected inputs, and responses for the application.
 
 # Cron Job
 
