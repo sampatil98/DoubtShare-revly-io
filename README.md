@@ -24,6 +24,11 @@
 - **Request Body**:
   - `email`: User's email address.
   - `password`: User's password.
+  - `name `: User's name.
+  - `usertype `: The type of user registering (either a Student or a Tutor).
+  - `userlanguage`: The languages spoken by the user..
+  - `subjectexpertise`: The subjects in which the user has expertise (applicable for tutors)
+  - `class`:he class or grade of the user (applicable for students)
 - **Response**:
   - `200 OK` on successful registration.
   - `400 Bad Request` if the user already exists or missing required fields.
