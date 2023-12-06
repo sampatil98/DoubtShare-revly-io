@@ -15,7 +15,7 @@ const authentication= async (req,res,next)=>{
             if(decode){
 
                 // attaching decoded data from jwt token with req.body
-                req.body.user=decode;
+                req.user=decode;
                 next();
             }else{
                 res.status(400).send({
